@@ -1,0 +1,339 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+
+}
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+
+header {
+    background-color: #0e387a;
+    color: #ffffff; /* white */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 2rem;
+}
+
+/* Dashboard container styling */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh; /* full height */
+}
+
+
+
+.current-weather {
+    word-wrap: break-word; /* Allow long words to be able to break and wrap onto the next line */
+    overflow-wrap: break-word; /* Breaks the word at the end of the line */
+    max-width: 100%; /* Max width of the container */
+    width: 100%; /* Width of the container */
+    border: solid 1px;
+    margin: 0 auto; /* Centers the div in the parent container */
+    background-color: #fff; /* White background */
+    box-sizing: border-box; /* Include padding and border in the element's size */
+    /* Add any other styling you want, such as border, shadow, etc. */
+    border-radius: 5px;
+}
+
+
+
+/* If using a table for layout */
+.current-weather table {
+    width: 100%; /* Ensure table is not wider than its container */
+    table-layout: fixed; /* Prevents table cells from growing beyond the table width */
+}
+
+.current-weather td {
+    word-break: break-all; /* Ensures that text within table cells can break as well */
+}
+
+
+/* Styles for the city list container */
+.city-list {
+    padding: 0;
+    margin: 20px 0;
+    list-style: none; /* Removes default list styling */
+  }
+  
+
+
+
+  /* Styles for the city buttons */
+  .city-btn {
+    background-color: rgb(182, 182, 182); /* A nice shade of grey */
+    color: white; /* White text color */
+    border: none; /* Removes default border */
+    padding: 10px 15px; /* Padding for a larger click area and better aesthetics */
+    margin: 5px 0; /* Adds a little space between buttons */
+    width: 100%; /* Makes the buttons extend to the full width of the container */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    cursor: pointer; /* Changes cursor to indicate clickable items */
+    text-align: left; /* Aligns text to the left */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+
+
+  .city-btn:hover {
+    background-color: rgb(65, 59, 59); /* Darker shade of grey for hover effect */
+  }
+  
+
+
+  /* Styles for scrollable list if you have many cities */
+  .city-list {
+    max-height: 400px; /* Maximum height before scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    scrollbar-width: thin; /* Makes scrollbar thinner (Firefox) */
+    scrollbar-color: #007bff white; /* Colors the scrollbar (Firefox) */
+  }
+  
+
+
+  /* For Webkit browsers like Chrome and Safari */
+  .city-list::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+  }
+  
+  .city-list::-webkit-scrollbar-track {
+    background: white; /* Scrollbar track color */
+  }
+  
+  .city-list::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* Scrollbar color */
+    border-radius: 20px; /* Rounded scrollbar for a modern look */
+  }
+
+  
+
+
+
+/* Search section styling */
+.search_word {
+    width: 20%;
+    background-color: #f8f9fa; /* light grey */
+    padding: 20px;
+}
+
+.search_word h1 {
+    margin: 0 0 20px 0;
+    font-size: 1.65rem;
+}
+
+.search_box {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+
+.search_box input
+{
+border: 1px solid;
+border-radius: 2px;
+}
+
+
+.search_box input,
+.search_box button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Standard border to make them look similar */
+    box-sizing: border-box; /* This ensures padding is included in width */
+}
+
+
+
+.search_box button {
+    border: 1px solid #ccc;
+    background-color: #007bff; /* blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+
+.search_box button:hover {
+    background-color: #0056b3; /* darker blue */
+}
+
+
+
+.thin-line {
+    height: 1px; /* Make the line thin */
+    background-color: #d3d3d3; /* Light grey color for the line */
+    width: 90%; /* The width of the line*/
+    margin: 0 auto; /* Centers the line horizontally */
+}
+
+/* Weather content styling */
+.weather-content {
+    width: 80%;
+    padding: 20px;
+    text-align: start;
+}
+
+.current-weather {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Forecast styling */
+.five_days {
+    color: #343a40; /* dark grey */
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-box {
+    background-color: #343a40; /* dark grey */
+    color: white;
+    padding: 20px;
+    width: 18%; /*5 boxes in a row */
+    margin-right: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.forecast-box:last-child {
+    margin-right: 0;
+}
+
+.forecast-date {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.weather-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.forecast-temp,
+.forecast-wind,
+.forecast-humidity {
+    margin-bottom: 5px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .search_word,
+    .weather-content {
+        width: 100%;
+    }
+
+    .forecast-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .forecast-container {
+        flex-direction: column;
+    }
+}
+
+
+
+/* Responsive styling for mobile devices */
+@media (max-width: 480px) {
+    header {
+        font-size: 1.5rem; /*header font size for smaller screens */
+        padding: 5px 0; 
+    }
+
+    .search_word h1 {
+        font-size: 1.25rem;
+    }
+
+    .search_box input,
+    .search_box button {
+        padding: 8px; /* Slightly reduces padding */
+        font-size: 16px; /* Ensure the font size is not too small */
+    }
+
+    /* Adjust the layout of the dashboard container for smaller screens */
+    .dashboard-container {
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+
+        
+    }
+    .search_word {
+        width: 100%; /* Full width */
+        padding: 15px; /* Appropriate padding */
+        order: 1; /* Ensures these elements come before .city-list */
+    }
+
+    .weather-content {
+        width: 100%; /* Full width */
+        order: 1; /* Ensures these elements come before .city-list */
+        padding: 15px; /* Adjust padding for spacing */
+    }
+
+    .forecast-container,
+    .current-weather,
+    .forecast-box {
+        width: 100%; /* Full width */
+        order: 1; /* Ensures these elements come before .city-list */
+
+    }
+
+    .forecast-container {
+        display: block; /* Stack forecast boxes */
+    }
+
+    .forecast-box {
+        margin-bottom: 10px; /* Add space between boxes */
+    }
+
+    .city-btn {
+        font-size: 14px; /* Reduce font size for space */
+        padding: 8px; /* Reduce padding */
+        margin-bottom: 8px; /* Less space between buttons */
+    }
+
+    .thin-line {
+        width: 80%; /* Adjust line width */
+        margin: 10px auto; /* Center the line */
+    }
+
+    .city-list {
+        max-height: 150px; /* Reduce height to prevent it from taking up too much space */
+        margin-bottom: 10px; /* Space below city list */
+        width: 100%; /* Ensures .city-list takes the full width of the container */
+        padding: 0 15px; /* Adds padding on the sides, adjust as needed */
+        box-sizing: border-box; /* Ensures padding is included in the width */
+
+    }
+
+    /* Style scrollbar for city list */
+    .city-list::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .city-list::-webkit-scrollbar-track {
+        background: white;
+    }
+
+    .city-list::-webkit-scrollbar-thumb {
+        background-color: #007bff;
+        border-radius: 20px;
+    }
+}
