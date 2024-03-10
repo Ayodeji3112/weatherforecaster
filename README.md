@@ -59,9 +59,15 @@ WHEN I click on a city in the search history,  I am again presented with current
 
 
 ## Link to deployed program: 
+https://ayodeji3112.github.io/weatherforecaster/
 
 
 ## Screenshots:  
+
+
+![alt text](<Screenshot 2024-03-10 at 15.37.47.png>) 
+![alt text](<Screenshot 2024-03-10 at 15.37.31.png>) 
+![alt text](<Screenshot 2024-03-10 at 15.37.22.png>)
 
 
 
