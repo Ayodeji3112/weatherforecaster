@@ -129,6 +129,8 @@ header {
 .search_box {
     margin-bottom: 20px;
     border-radius: 10px;
+      transition: width 0.4s ease-in-out;
+
 }
 
 
